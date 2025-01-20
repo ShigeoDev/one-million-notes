@@ -82,7 +82,7 @@ const StickyDetails = ({ noteId, onClose, color, font, data, length }: StickyDet
     <div
       className="z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                  w-[min(80vw,80vh)] h-[min(80vw,80vh)] border-2 border-black rounded-lg 
-                 shadow-[10px_10px_0_rgba(0,0,0,0.5)] text-black p-6 overflow-y-auto"
+                 shadow-[10px_10px_0_rgba(0,0,0,0.5)] text-black p-6"
       style={{ backgroundColor: color, fontFamily: font }}
     >
       <button
@@ -95,7 +95,7 @@ const StickyDetails = ({ noteId, onClose, color, font, data, length }: StickyDet
       <h2 className="text-xl font-bold mb-2">Note ID: {noteId}</h2>
       {data != "" ?
 
-        <p className="leading-relaxed text-xl text-wrap break-words">
+        <p className="overflow-y-auto h-5/6 leading-relaxed text-xl text-wrap break-words">
           {data}
         </p>
         :
