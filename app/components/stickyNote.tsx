@@ -17,7 +17,7 @@ const StickyNote = ({ message, onClick, style }: StickyNotesProp) => {
             onClick={onClick}
             style={style}   
     >
-      <p className={`${inter.className} px-2 py-2 break-all break-words text-wrap`} style={{ fontFamily: style?.fontFamily }}>
+      <p className={`${inter.className} px-2 py-2 break-all break-words text-wrap`} style={{ fontFamily: style?.fontFamily, lineBreak: "anywhere" }}>
         {message}
       </p>
     </div>
