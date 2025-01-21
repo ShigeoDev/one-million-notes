@@ -55,7 +55,7 @@ const StickyDetails = ({ noteId, onClose, color, font, data, length }: StickyDet
 
     try {
       if (textRef.current && textRef.current.value) {
-        if (textRef.current.value.length < 50 || textRef.current.value.length > 300) {
+        if (textRef.current.value.replaceAll(" ", "").length < 50 || textRef.current.value.length > 300) {
           badText("Text must be at least 50 characters and at most 300 characters.")
         }
         else {
